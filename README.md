@@ -1,2 +1,2 @@
-# linkto
-A dynamic DNS service for a better future. (UNIX-systems)
+# LinkTo
+Our open sourced projects are coming soon.
