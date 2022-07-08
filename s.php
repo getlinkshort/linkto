@@ -2,13 +2,7 @@
 header('Content-type: text/plain');
 include 'init.php';
 function generateRandomString($length) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
+    return bin2hex(random_bytes($length/2));
 }
 
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
